@@ -1,0 +1,17 @@
+Package to install with npm: npm install example_package
+
+- 'express'
+- 'express-session'
+- 'object-hash'
+
+-------------------------------------------------------------------------------
+How to launch the app:
+node back.js
+
+Then go on :
+Localhost:8000
+
+-------------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,149 @@
+<head>
+  <title>ADMIN</title>
+  <style>
+  .header {
+    padding: 1% 1%;
+    margin: 0;
+    text-align: center;
+    background: #FA8072;
+    color: white;
+    font-size: 25px;
+  }
+
+  .header a {
+    margin : 0 5%;
+    color: black;
+    text-decoration: none;
+  }
+
+  .header a:hover {
+    color: lightblue;
+  }
+  body {
+    background-color: #FDF5E6;
+    margin : 0
+  }
+  h1 {
+    text-align: center;
+    margin: 4%;
+    color: lightblue;
+  }
+  .column {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid lightblue;
+    column-width: 100px;
+    text-align: center;
+  }
+  form {
+    margin-bottom: 10%;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    text-align: center;
+    font-style: italic;
+  }
+}
+</style>
+</head>
+</head>
+<body>
+  <div class="header">
+    <a href="/"> Home </a>
+    <a href="/shop"> E-Shop </a>
+    <a href="/account"> Account </a>
+    <a href="/basket"> Basket </a>
+  </div>
+  <p> You are in the cockpit! </p>
+  <h1> User Management </h1>
+  <div class="column">
+    <h2> Create an user </h2>
+    <form action="/create" method="POST">
+      <input type="text" name="login" placeholder="Username" required>
+      <br>
+      <input type="email" name="mail" placeholder="Mail">
+      <br>
+      <input type="tel" name="phone" placeholder="Phone">
+      <br>
+      <input type="password" name="passwd" placeholder="Password"required>
+      <br>
+      <input type="submit" name="submit" value="OK">
+    </form>
+    <h2> Modify password of an user </h2>
+    <form action="/admin_modify_user" method="POST">
+      <input type="text" name="login" placeholder="Username" required>
+      <br>
+      <input type="password" name="new_passwd" placeholder="New Password"required>
+      <br>
+      <input type="submit" name="submit" value="OK">
+    </form>
+    <h2> Erase an user </h2>
+    <form action="/admin_erase_user" method="POST">
+      <form action="/login" method="POST">
+        <input type="text" name="login" placeholder="Username" required>
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+    </div>
+    <h1> Category Management </h1>
+    <div class="column">
+      <h2> Create a category</h2>
+      <form action="/admin_create_category" method="POST">
+        <input type="text" name="category" placeholder="Category" required>
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+      <h2> Modify a category </h2>
+      <form action="/login" method="POST">
+        <input type="text" name="old_category" placeholder="Category" required>
+        <br>
+        <input type="text" name="new_category" placeholder="New Name">
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+      <h2> Erase a category </h2>
+      <form action="/login" method="POST">
+        <input type="text" name="category" placeholder="Category" required>
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+    </div>
+    <h1> Article Management </h1>
+    <div class="column">
+      <h2> Create an article</h2>
+      <form action="/create" method="POST">
+        <input type="text" name="category" placeholder="Category" required>
+        <br>
+        <input type="text" name="article" placeholder="Article">
+        <br>
+        <input type="text" name="size" placeholder="Size">
+        <br>
+        <input type="text" name="color" placeholder="Color"required>
+        <br>
+        <input type="text" name="quantity" placeholder="Quantity"required>
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+      <h2> Modify an article </h2>
+      <form action="/login" method="POST">
+        <input type="text" name="article" placeholder="Article">
+        <br>
+        <input type="text" name="size" placeholder="Size">
+        <br>
+        <input type="text" name="color" placeholder="Color"required>
+        <br>
+        <input type="text" name="quantity" placeholder="Quantity"required>
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+      <h2> Erase an article </h2>
+      <form action="/admin" method="POST">
+        <input type="text" name="article" placeholder="Article">
+        <br>
+        <input type="submit" name="submit" value="OK">
+      </form>
+    </div>
+  </body>
+  </html>

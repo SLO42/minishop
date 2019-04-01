@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  .header {
+    padding: 1% 1%;
+    margin: 0;
+    text-align: center;
+    background: #FA8072;
+    color: white;
+    font-size: 25px;
+  }
+
+  .header a {
+    margin : 0 5%;
+    color: black;
+    text-decoration: none;
+  }
+
+  .header a:hover {
+    color: lightblue;
+  }
+  body {
+    background-color: #FDF5E6;
+    margin : 0
+  }
+  .column {
+    margin-top: 15%;
+    padding: 0;
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid lightblue;
+    column-width: 100px;
+    text-align: center;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  form {
+    margin-bottom: 10%;
+  }
+  .g-recaptcha {
+    text-align: center;
+    margin-left: 30%
+  }
+}
+</style>
+<title>Create an account</title>
+</head>
+<body>
+  <div class="header">
+    <a href="/"> Home </a>
+    <a href="/shop"> E-Shop </a>
+    <a href="/account"> Account </a>
+    <a href="/basket"> Basket </a>
+  </div>
+  <div class ="column">
+    <h1> Create an account </h1>
+    <form action="/create" method="POST">
+      <input type="text" name="login" placeholder="Username" required>
+      <br>
+      <input type="email" name="mail" placeholder="Mail">
+      <br>
+      <input type="tel" name="phone" placeholder="Phone">
+      <br>
+      <input type="password" name="passwd" placeholder="Password"required>
+      <br>
+      <div class="g-recaptcha" data-sitekey="6LexGJsUAAAAADebmWuYAZ0kUhn7w0eOaElilEs-" data-theme="dark"></div><br>
+      <br>
+      <input type="submit" name="submit" value="OK">
+    </form>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <h1> Login </h1>
+    <form action="/login" method="POST">
+      <input type="text" name="login" placeholder="Username" required>
+      <br>
+      <input type="password" name="passwd" placeholder="Password"required>
+      <br>
+      <input type="submit" name="submit" value="OK">
+    </form>
+    <form action="/logout" method="POST">
+      <input type="submit" name="submit" value="Logout">
+    </form>
+    <h1> Admin Login </h1>
+    <form action="/admin" method="POST">
+      <input type="text" name="login" placeholder="Name" required>
+      <br>
+      <input type="password" name="passwd" placeholder="Password"required>
+      <br>
+      <input type="submit" name="submit" value="Connect">
+    </form>
+  </div>
+</body>
+</html>
